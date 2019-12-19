@@ -1,0 +1,22 @@
+{
+  "name": "eReolen Go! – Giv adgang",
+  "version": "1.0",
+  "description": "Et hack!",
+  "permissions": ["activeTab", "declarativeContent"],
+  "icons": {
+    "16": "images/ereolengo16.png",
+    "32": "images/ereolengo32.png",
+    "48": "images/ereolengo48.png",
+    "128": "images/ereolengo128.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://misc.srvitkhulk.itkdev.dk/*"
+      ],
+      "css": ["styles.css"],
+      "js": ["script.js"]
+    }
+  ]
+}
