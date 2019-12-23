@@ -1,8 +1,13 @@
 {
   "name": "eReolen Go! – Giv adgang",
+  "short_name": "eReolen Go! – Giv adgang",
   "version": "1.0",
-  "description": "Et hack!",
-  "permissions": ["activeTab", "declarativeContent"],
+  "description": "For internal use on eroelengo.dk and givadgang.uni-login.dk only! Helps getting information from givadgang.uni-login.dk to ereolengo.dk.",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
   "icons": {
     "16": "images/ereolengo16.png",
     "32": "images/ereolengo32.png",
@@ -13,10 +18,15 @@
   "content_scripts": [
     {
       "matches": [
-        "https://misc.srvitkhulk.itkdev.dk/*"
+        "https://misc.srvitkhulk.itkdev.dk/*",
+        "https://givadgang.uni-login.dk/givadgang"
       ],
       "css": ["styles.css"],
       "js": ["script.js"]
     }
-  ]
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
 }

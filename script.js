@@ -27,6 +27,17 @@ const getInstitutions = () => {
 	return institutions
 }
 
+let apiUrl = null
+let apiToken = null
+
+chrome.storage.sync.get({
+  apiUrl: '',
+  apiToken: ''
+}, function(items) {
+  apiUrl = items.apiUrl
+  apiToken = items.apiToken
+});
+
 const button = document.querySelector('#extraKnap1 > button')
 if (null !== button) {
 	const exportButton = button.cloneNode(true)
@@ -35,16 +46,20 @@ if (null !== button) {
   exportButton.classList.add('export-institutions')
 	exportButton.addEventListener('click', event => {
 		const institutions = getInstitutions()
-    const url = 'https://misc.srvitkhulk.itkdev.dk/givadgang/api/update.php'
 
-    if (confirm(`Export ${Object.keys(institutions).length} institutions to ${url}?`)) {
+    if (confirm(`Export ${Object.keys(institutions).length} institutions to ${apiUrl}?`)) {
       const xhr = new XMLHttpRequest()
-      xhr.open('POST', url)
+      xhr.open('POST', apiUrl)
+      xhr.setRequestHeader('Authorization', `Token: ${apiToken}`)
       xhr.send(JSON.stringify(institutions))
 
       xhr.onreadystatechange = function(event) {
-        if (4 === this.readyState && 201 === this.status) {
-          alert(`${Object.keys(institutions).length} institutions succesfully exported to ${url}`)
+        if (4 === this.readyState) {
+          if (201 === this.status) {
+            alert(`${Object.keys(institutions).length} institutions succesfully exported to ${apiUrl}`)
+          } else {
+            alert(`Error exporting ${Object.keys(institutions).length} institutions to ${apiUrl}`)
+          }
         }
       }
     }
