@@ -1,0 +1,9 @@
+{
+  "name": "ereolengo-givadgang",
+  "version": "1.0.0",
+  "author": "Mikkel Ricky <rimi@aarhus.dk>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}
