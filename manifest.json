@@ -2,7 +2,7 @@
   "name": "eReolen Go! – Giv adgang",
   "short_name": "eReolen Go! – Giv adgang",
   "version": "1.0",
-  "description": "For internal use on eroelengo.dk and givadgang.uni-login.dk only! Helps getting information from givadgang.uni-login.dk to ereolengo.dk.",
+  "description": "Helps getting information from givadgang.uni-login.dk to ereolengo.dk.",
   "permissions": [
     "activeTab",
     "declarativeContent",
@@ -19,7 +19,8 @@
     {
       "matches": [
         "https://misc.srvitkhulk.itkdev.dk/*",
-        "https://givadgang.uni-login.dk/givadgang"
+        "https://givadgang.uni-login.dk/givadgang",
+        "https://dev.ereolengo.dk/"
       ],
       "css": ["styles.css"],
       "js": ["script.js"]
