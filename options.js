@@ -20,7 +20,7 @@ function saveOptions () {
 function restoreOptions () {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
-    apiUrl: 'https://ereolengo.dk/ding_unilogin/api/institutions',
+    apiUrl: 'https://ereolengo.dk/unilogin/api/institutions',
     apiToken: ''
   }, function (items) {
     document.getElementById('api-url').value = items.apiUrl
