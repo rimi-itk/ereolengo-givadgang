@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <title>Options for eReolen Go! – Giv adgang</title>
   </head>
   <body>
-    <div>
-      <label for="api-url">API url</label>
-      <input type="url" id="api-url" required>
-    </div>
+    <div class="container-fluid">
+      <div class="form-group">
+        <label for="api-url">API url</label>
+        <input class="form-control" type="url" id="api-url" required>
+      </div>
 
-    <div>
-      <label for="api-url">API token</label>
-      <input type="text" id="api-token" required>
-    </div>
+      <div class="form-group">
+        <label for="api-url">API token</label>
+        <input class="form-control" type="text" id="api-token" required>
+      </div>
 
-    <div>
-      <div id="status"></div>
-    </div>
+      <div class="alert alert-success" id="status" style="visibility: hidden">Info</div>
 
-    <div>
-      <button id="save">Save</button>
+      <div class="form-group">
+        <button class="btn btn-primary" id="save">Save</button>
+      </div>
     </div>
 
     <script src="options.js"></script>
