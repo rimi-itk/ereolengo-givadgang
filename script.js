@@ -60,7 +60,16 @@ if (button !== null) {
   exportButton.innerText = 'Export institutions to eReolen Go!'
   exportButton.classList.add('export-institutions')
   exportButton.addEventListener('click', event => {
+    if (!(apiUrl && apiToken)) {
+      alert('Missing extension settings!')
+      return
+    }
     const institutions = getInstitutions()
+
+    if (Object.keys(institutions).length === 0) {
+      alert('No institutions found!')
+      return
+    }
 
     if (confirm(`Export ${Object.keys(institutions).length} institutions to ${apiUrl}?`)) {
       const xhr = new XMLHttpRequest()
