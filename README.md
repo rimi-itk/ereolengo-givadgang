@@ -26,12 +26,12 @@ yarn standard --fix
    (i.e. outside the “Download” folder).
 3. Rename the folder to `ereolengo-givadgang`.
 4. Open `chrome://extensions/` in Google Chrome.
-5. Enable “Developer mode”
-6. Click “Load unpacked” and select the unpacked extension folder
-7. (Optional) Disable “Developer mode”
-8. Open the extension options (Details > Extension options) and set options as
-   required.
-   ![extension details][extension-details]
+5. Enable “Developer mode” (“Udviklertilstand”)
+6. Click “Load unpacked” (“indlæs upakket”) and select the unpacked extension folder
+7. (Optional) Disable “Developer mode” (“Udviklertilstand”)
+8. Open the extension options (Details > Extension options) (Detaljer >
+   Valgmuligheder for udvidelser) and set options as required.  ![extension
+   details][extension-details]
 9. Go to https://givadgang.uni-login.dk/givadgang and check that the “Export
    institutions to eReolen Go!” appears next to the first “Tilføj grupper”
    button.
