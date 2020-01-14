@@ -19,7 +19,7 @@
     {
       "matches": [
         "https://misc.srvitkhulk.itkdev.dk/*",
-        "https://givadgang.uni-login.dk/givadgang",
+        "https://givadgang.uni-login.dk/givadgang/*",
         "https://*.ereolengo.dk/",
         "https://ereolengo.dk/"
       ],

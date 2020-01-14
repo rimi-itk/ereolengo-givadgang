@@ -23,9 +23,6 @@ const getInstitutions = () => {
           institutions[id].group += `; ${group} (${numberOfMembers})`
           institutions[id].type += `; ${type}`
           institutions[id].number_of_members += numberOfMembers
-
-          console.log(id, institutions[id])
-          alert(id)
         } else {
           institutions[id] = {
             id: id,
