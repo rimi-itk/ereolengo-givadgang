@@ -31,6 +31,7 @@ yarn standard --fix
 7. (Optional) Disable “Developer mode”
 8. Open the extension options (Details > Extension options) and set options as
    required.
+   ![extension details][extension-details]
 9. Go to https://givadgang.uni-login.dk/givadgang and check that the “Export
    institutions to eReolen Go!” appears next to the first “Tilføj grupper”
    button.
@@ -41,7 +42,14 @@ yarn standard --fix
    the latest release
 2. Unpack the downloaded file and move the files in the folder into the folder
    created in step 3 under “Installation”.
+
+   Note: You can find the extension installation path in the extension details:
+   ![extension details][extension-details]
 3. Open `chrome://extensions/` in Google Chrome.
 4. Enable “Developer mode”
 5. Find the “eReolen Go! – Giv adgang” extension and click to “curly arrow“
    button to reload the extension.
+   ![extension overview][extension-overview]
+
+[extension-overview]: images/extention-overview.png "Extension overview"
+[extension-details]: images/extention-details.png "Extension details"
