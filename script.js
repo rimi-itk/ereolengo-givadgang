@@ -50,6 +50,7 @@ chrome.storage.sync.get({
   apiToken = items.apiToken
 })
 
+setTimeout(() => {
 const button = document.querySelector('#extraKnap1 > button')
 if (button !== null) {
   const exportButton = button.cloneNode(true)
@@ -89,3 +90,4 @@ if (button !== null) {
   })
   button.parentNode.appendChild(exportButton)
 }
+}, 5000)
