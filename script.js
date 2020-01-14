@@ -15,14 +15,25 @@ const getInstitutions = () => {
         const group = row.querySelector('td:nth-child(3)').innerText
         const type = row.querySelector('td:nth-child(4)').innerText
         const numberOfMembers = parseInt(row.querySelector('td:nth-child(5)').innerText)
-        // @TODO Handle duplicate ids!
 
-        institutions[id] = {
-          id: id,
-          name: name,
-          group: group,
-          type: type,
-          number_of_members: numberOfMembers
+        if (id in institutions) {
+          if (!/\(\d+\)/.test(institutions[id].group)) {
+            institutions[id].group += ` (${institutions[id].number_of_members})`
+          }
+          institutions[id].group += `; ${group} (${numberOfMembers})`
+          institutions[id].type += `; ${type}`
+          institutions[id].number_of_members += numberOfMembers
+
+          console.log(id, institutions[id])
+          alert(id)
+        } else {
+          institutions[id] = {
+            id: id,
+            name: name,
+            group: group,
+            type: type,
+            number_of_members: numberOfMembers
+          }
         }
       }
     }
