@@ -14,7 +14,7 @@ const getInstitutions = () => {
         const name = match[2]
         const group = row.querySelector('td:nth-child(3)').innerText
         const type = row.querySelector('td:nth-child(4)').innerText
-        const numberOfMembers = parseInt(row.querySelector('td:nth-child(5)').innerText)
+        const numberOfMembers = parseInt(row.querySelector('td:nth-child(5)')?.innerText ?? 0)
 
         if (id in institutions) {
           if (!/\(\d+\)/.test(institutions[id].group)) {

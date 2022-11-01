@@ -20,8 +20,8 @@ yarn standard --fix
 
 ## Installation
 
-1. Go to https://github.com/rimi-itk/ereolengo-givadgang/releases/ and download
-   the latest release
+1. Go to https://github.com/rimi-itk/ereolengo-givadgang/tags and download the
+   latest release
 2. Unpack the downloaded file and move the new folder to a safe place
    (i.e. outside the “Download” folder).
 3. Rename the folder to `ereolengo-givadgang`.
