@@ -1,7 +1,7 @@
 {
   "name": "eReolen Go! – Giv adgang",
   "short_name": "eReolen Go! – Giv adgang",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Helps getting information from givadgang.uni-login.dk to ereolengo.dk.",
   "permissions": [
     "activeTab",
@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://givadgang.uni-login.dk/givadgang/*",
+        "https://givadgang.unilogin.dk/givadgang/*",
         "https://dev.ereolengo.etek.dk/*",
         "https://ereolengo.dk/"
       ],
